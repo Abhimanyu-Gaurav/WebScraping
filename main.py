@@ -35,8 +35,18 @@ tag = soup.html
 
 ## Navigable string
 
-tag = soup.p.string
-print(tag)
+# tag = soup.p.string
+# print(tag)
 
-tag = soup.a.string
-print(tag)
+# tag = soup.a.string
+# print(tag)
+
+# tag = soup.h1.string
+# print(tag)
+
+## BeautifulSoup
+print(soup.body)
+# print(soup.find("p"))
+# print(soup.find_all("p"))
+# print(soup.find_all("h1"))
+
