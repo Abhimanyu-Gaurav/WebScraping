@@ -65,8 +65,14 @@ soup = BeautifulSoup(r.text , "html.parser")
 # print(id_data)
 
 ## Extracting Text from the tags in web page
-lines = soup.find_all("p")
+# lines = soup.find_all("p")
 # print(lines)
 
-for l in lines:
-    print(l.text)
+# for l in lines:
+#     print(l.text) # to extract only text from paragraph
+
+s = soup.find("div",class_ = "") # This is to extract data from class.
+#or
+s = soup.find("p",class_ = "") # This is to extract data from particular class.
+print s 
+
