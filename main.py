@@ -1,9 +1,9 @@
-import requests
-from bs4 import BeautifulSoup
+import requests # Here requets module used access HTML code of the website.
+from bs4 import BeautifulSoup 
 
 url = "https://timesofindia.indiatimes.com/city/delhi"
 
-r = requests.get(url)
+r = requests.get(url) # it is used to get url of website.
 
 # print(r.status_code)
 # print(r.text)
@@ -11,7 +11,7 @@ r = requests.get(url)
 
 soup = BeautifulSoup(r.text , "html.parser")
 
-# print(soup.prettify()) # To see data in beautifull manner.
+# print(soup.prettify()) # To see data in beautifull manner along with tree.
 # print(soup.title)
 # print(soup.title.name)
 # print(soup.title.string)
@@ -80,6 +80,15 @@ soup = BeautifulSoup(r.text , "html.parser")
 # links = soup.find_all("a")
 # print(links)
 
-for i in soup.find_all("a"):
-    print(i) # To get data of all anchor tags .
-    print(i.get("href")) # To get data of all links, which is kept in href of anchor.
+# for i in links:
+#     print(i) # To get data of all anchor tags .
+#     print(i.get("href")) # To get data of all links, which is kept in href of anchor.
+
+## Extracting image information in Webpage
+img = soup.find_all("img") # To extract image url of data.
+print(img) # Url of image is in "src"
+
+for i in img:
+    print(i.get("src"))
+
+    
