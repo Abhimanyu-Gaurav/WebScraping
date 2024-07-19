@@ -81,4 +81,5 @@ soup = BeautifulSoup(r.text , "html.parser")
 # print(links)
 
 for i in soup.find_all("a"):
-    print(i.get("href"))
+    print(i) # To get data of all anchor tags .
+    print(i.get("href")) # To get data of all links, which is kept in href of anchor.
