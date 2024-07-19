@@ -86,9 +86,10 @@ soup = BeautifulSoup(r.text , "html.parser")
 
 ## Extracting image information in Webpage
 img = soup.find_all("img") # To extract image url of data.
-print(img) # Url of image is in "src"
+# print(img) # Url of image is in "src"
 
 for i in img:
-    print(i.get("src"))
+    print(i.get("src")) # To get url of image.
+    # print(i.get("alt")) # To get name of image.
 
     
