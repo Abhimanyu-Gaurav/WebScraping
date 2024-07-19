@@ -11,7 +11,7 @@ r = requests.get(url)
 
 soup = BeautifulSoup(r.text , "html.parser")
 
-# print(soup.prettify())
+# print(soup.prettify()) # To see data in beautifull manner.
 # print(soup.title)
 # print(soup.title.name)
 # print(soup.title.string)
@@ -71,8 +71,14 @@ soup = BeautifulSoup(r.text , "html.parser")
 # for l in lines:
 #     print(l.text) # to extract only text from paragraph
 
-s = soup.find("div",class_ = "") # This is to extract data from class.
-#or
-s = soup.find("p",class_ = "") # This is to extract data from particular class.
-print s 
+# s = soup.find("div",class_ = "") # This is to extract data from class.
+# #or
+# s = soup.find("p",class_ = "") # This is to extract data from particular class.
+# print s 
 
+## Extracting links in web page
+# links = soup.find_all("a")
+# print(links)
+
+for i in soup.find_all("a"):
+    print(i.get("href"))
