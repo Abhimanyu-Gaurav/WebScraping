@@ -23,15 +23,20 @@ soup = BeautifulSoup(r.text , "html.parser")
 
 # TAG
 tag = soup.html
-print(tag)
-print(type(tag))
+# print(tag)
+# print(type(tag))
 
-tag = soup.p
-print(tag)
-tag = soup.h1
-print(tag)
-tag = soup.h2
-print(tag)
+# tag = soup.p
+# print(tag)
+# tag = soup.h1
+# print(tag)
+# tag = soup.h2
+# print(tag)
 
 ## Navigable string
 
+tag = soup.p.string
+print(tag)
+
+tag = soup.a.string
+print(tag)
